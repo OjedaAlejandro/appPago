@@ -1,0 +1,64 @@
+<div class="cont_principal">
+  @for (item of modelo; track $index) {
+    <div class="contenedor" data-aos="flip-left" >
+      <div class="pack-container">
+        <div class="header">
+          <p class="title">
+            {{item.name}}
+          </p>
+          <div class="price-container">
+            <span>$</span>{{conversion(item.unit_amount)}}
+            <span>/US</span>
+          </div>
+        </div>
+        <div>
+          <ul class="lists">
+            <li class="list">
+              <span>
+                <svg aria-hidden="true" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4.5 12.75l6 6 9-13.5" stroke-linejoin="round" stroke-linecap="round"></path>
+                </svg>
+              </span>
+              <p>
+                {{item.cart1}}
+              </p>
+            </li>
+            <li class="list">
+              <span>
+                <svg aria-hidden="true" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4.5 12.75l6 6 9-13.5" stroke-linejoin="round" stroke-linecap="round"></path>
+                </svg>
+              </span>
+              <p>
+                {{item.cart2}}
+              </p>
+            </li>
+            <li class="list">
+              <span>
+                <svg aria-hidden="true" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4.5 12.75l6 6 9-13.5" stroke-linejoin="round" stroke-linecap="round"></path>
+                </svg>
+              </span>
+              <p>
+               {{item.cart3}}
+              </p>
+            </li>
+            <li class="list">
+              <span>
+                <svg aria-hidden="true" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4.5 12.75l6 6 9-13.5" stroke-linejoin="round" stroke-linecap="round"></path>
+                </svg>
+              </span>
+              <p>
+                {{item.cart4}}
+              </p>
+            </li>
+          </ul>
+        </div>
+        <div class="button-container">
+            <button (click)="Pagar($index)">Comprar</button>
+        </div>
+      </div>
+    </div>
+  }
+</div>
